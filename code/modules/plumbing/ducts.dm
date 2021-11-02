@@ -291,8 +291,9 @@ All the important duct code:
 	set_anchored(FALSE)
 
 /obj/machinery/duct/Destroy()
+	. = ..()
 	disconnect_duct()
-	return ..()
+	return
 
 /obj/machinery/duct/MouseDrop_T(atom/A, mob/living/user)
 	if(!istype(A, /obj/machinery/duct))
